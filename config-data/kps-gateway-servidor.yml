@@ -15,15 +15,15 @@ spring:
         locator:
           enable: true
       routes:
-        - id: kps-catalogo-service
-          uri: lb://kps-catalogo-service
+        - id: kps-libro-service
+          uri: lb://kps-libro-service
           predicates:
-            - Path=/categorias/**
-        - id: kps-productos-service
-          uri: lb://kps-productos-service
-          predicates:
-            - Path=/productos/**
-        - id: kps-usuarios-service
-          uri: lb://kps-usuarios-service
+            - Path=/libros/**
+        - id: kps-usuario-service
+          uri: lb://kps-usuario-service
           predicates:
             - Path=/usuarios/**
+        - id: kps-prestamo-service
+          uri: lb://kps-prestamo-service
+          predicates:
+            - Path=/prestamos/**
