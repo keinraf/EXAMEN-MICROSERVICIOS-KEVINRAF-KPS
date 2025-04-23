@@ -1,0 +1,29 @@
+server:
+  port: 8085
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka
+  instance:
+    hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enable: true
+      routes:
+        - id: kps-catalogo-service
+          uri: lb://kps-catalogo-service
+          predicates:
+            - Path=/categorias/**
+        - id: kps-productos-service
+          uri: lb://kps-productos-service
+          predicates:
+            - Path=/productos/**
+        - id: kps-usuarios-service
+          uri: lb://kps-usuarios-service
+          predicates:
+            - Path=/usuarios/**
