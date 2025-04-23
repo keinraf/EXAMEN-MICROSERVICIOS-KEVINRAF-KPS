@@ -10,7 +10,7 @@ spring:
         git:
           uri: https://github.com/keinraf/EXAMEN-MICROSERVICIOS-KEVINRAF-KPS.git
           searchPaths: config-data
-          default-label: main
+          default-label: principal
   security:
     user:
       name: kevinraf
