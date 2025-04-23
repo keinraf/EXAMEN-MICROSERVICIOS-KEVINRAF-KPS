@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: kps-prestamo-service
+  profiles:
+    active: development
+  config:
+    import: optional:configserver:http://kevinraf:paricahua@localhost:7070
